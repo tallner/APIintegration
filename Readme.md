@@ -7,18 +7,18 @@
   
 
 ## Väl godkänt kriterier  
-Uppfyll 1 av 4 punkterna
-- [ ] Kunna backstacka korrekt, inte enbart manuell navigation  
-- [ ] Kotlin  
-- [ ] Sparar de saker man har fyllt i om man skulle pausa. (hint:SavedInstanceState)  --> FICK INTE ATT FUNGERA  
-- [ ] Spara data även när man stänger appen (hint: SharedPreferences)  
+Kotlin + minst 1 av 4 punkter
+- [ ] Kunna backstacka korrekt, inte enbart manuell navigation, se bild nedan  
+- [ ] Notifikation kopplat till APIet (T.ex: notis vid regn, eller en datapunkt ändrats)  
+- [ ] Firebase databasen utnyttjas av en annan plattform, js webben,IOS, eller på tablet, wearable, android auto. (crossplattform)  
+- [ ] 2 APIer  
 
-
+<!-- 
 ## Egna krav   
-- [ ]  
-- [ ]  
-- [ ]  
+- [ ] placeholder 
+- [ ] placeholder 
+- [ ] placeholder
+ -->
 
 
-
-![Backstacking](/res/drawable/backstacking.png "Back stack")
+<img src="/app/src/main/res/drawable/backstacking.png" alt="drawing" width="200"/>
