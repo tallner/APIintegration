@@ -2,14 +2,14 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/firstFragment"
-        android:title="Home"
+        android:id="@+id/currentTempFragment"
+        android:title="Current"
         android:menuCategory="secondary"
-        android:icon="@drawable/ic_home"/>
+        android:icon="@drawable/ic_sun"/>
     <item
-        android:id="@+id/secondFragment"
+        android:id="@+id/forecastFragment"
         android:menuCategory="secondary"
-        android:title="Settings"
+        android:title="Forecast"
         android:icon="@drawable/ic_settings"/>
     <item
         android:id="@+id/thirdFragment"
