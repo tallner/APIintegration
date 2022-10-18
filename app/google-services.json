@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "713633403232",
+    "project_id": "apiintegration-5ed16",
+    "storage_bucket": "apiintegration-5ed16.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:713633403232:android:5a8a3386aa30d58fd74e05",
+        "android_client_info": {
+          "package_name": "com.tallner.apiintegration"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "713633403232-vah2f5sjcr211911kqhrgtvitppsttuj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tallner.apiintegration",
+            "certificate_hash": "79d3b12d8f3925a922ceabe394dfa4ea9ba77ffe"
+          }
+        },
+        {
+          "client_id": "713633403232-1i8kjvubum8s97dk8f3e7v1bse1vg6eh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAchy98Pq8nWgwh6C1SYwEgf2187eYrHGk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "713633403232-1i8kjvubum8s97dk8f3e7v1bse1vg6eh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

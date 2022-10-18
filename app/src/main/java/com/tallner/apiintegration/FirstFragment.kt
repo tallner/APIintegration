@@ -1,10 +1,6 @@
 package com.tallner.apiintegration
 
-import android.content.Context
-import android.hardware.Sensor
-import android.hardware.SensorEvent
-import android.hardware.SensorEventListener
-import android.hardware.SensorManager
+
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -16,8 +12,6 @@ import com.android.volley.RequestQueue
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
 import java.lang.Exception
-
-
 
 class FirstFragment : Fragment() {
     private lateinit var tvTemperature: TextView
@@ -33,7 +27,6 @@ class FirstFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
         return inflater.inflate(R.layout.fragment_first, container, false)
     }
 
@@ -48,33 +41,20 @@ class FirstFragment : Fragment() {
             // request queue and initializing it.
             val queue: RequestQueue = Volley.newRequestQueue(view.context)
 
-
-
-
-
-
-
-                val JsonRequest = JsonObjectRequest(
-                    Request.Method.GET, url, null,
-                    { response ->
-                        try {
-                            tvTemperature.text =
-                                response.getJSONObject("main").getString("temp").toString() + " kelvin"
-
-                        }catch (e : Exception){
-                            e.printStackTrace()
-                        }
-                    },
-                    { error ->
-                        tvTemperature.text = "Not available"
-                    })
-
-
-                queue.add(JsonRequest)
-
-
+            val JsonRequest = JsonObjectRequest(
+                Request.Method.GET, url, null,
+                { response ->
+                    try {
+                        tvTemperature.text =
+                            response.getJSONObject("main").getString("temp").toString() + " kelvin"
+                    }catch (e : Exception){
+                        e.printStackTrace()
+                    }
+                },
+                { error ->
+                    tvTemperature.text = "Not available"
+                })
+            queue.add(JsonRequest)
         }
     }
-
-
 }
