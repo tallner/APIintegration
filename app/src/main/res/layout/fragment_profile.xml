@@ -12,7 +12,7 @@
         android:id="@+id/tv_username"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
+        android:layout_marginStart="50dp"
         android:layout_marginTop="150dp"
         android:fontFamily="sans-serif-black"
         android:text="Username"
@@ -26,26 +26,25 @@
         android:id="@+id/tv_myusername"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="200dp"
         android:layout_marginTop="150dp"
-        android:layout_marginEnd="50dp"
         android:fontFamily="sans-serif-black"
         android:text="My name"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.735"
-        app:layout_constraintStart_toEndOf="@+id/tv_username"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tv_hometown"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="70dp"
         android:fontFamily="sans-serif-black"
         android:text="Hometown"
         android:textSize="20dp"
-        app:layout_constraintEnd_toStartOf="@+id/tv_myHometown"
-        app:layout_constraintHorizontal_bias="0.331"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_username" />
 
@@ -53,13 +52,41 @@
         android:id="@+id/tv_myHometown"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="40dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="70dp"
         android:fontFamily="sans-serif-black"
         android:text="My hometown"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_myusername" />
+
+    <TextView
+        android:id="@+id/tv_country"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="70dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Country"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_hometown" />
+
+    <TextView
+        android:id="@+id/tv_myCountry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="70dp"
+        android:fontFamily="sans-serif-black"
+        android:text="My country"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_myHometown" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
