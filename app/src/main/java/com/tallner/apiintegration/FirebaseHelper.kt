@@ -28,12 +28,6 @@ class FirebaseHelper() {
     }
 
 
-    val user = hashMapOf(
-        "username" to "Christian",
-        "password" to "123456",
-        "city" to "flyinge",
-        "country" to "sweden"
-    )
 
     fun addUser(user:HashMap<String,String>){
         // Add a new document with a generated ID

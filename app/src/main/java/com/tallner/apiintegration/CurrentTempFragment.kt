@@ -15,6 +15,7 @@ import com.android.volley.toolbox.Volley
 import java.lang.Exception
 
 class CurrentTempFragment : Fragment() {
+    private val myFirebaseHelper = FirebaseHelper()
     private lateinit var tvTemperature: TextView
     private lateinit var tvMyCity: TextView
     private var city = "lund"
@@ -24,12 +25,12 @@ class CurrentTempFragment : Fragment() {
                 city+ "," + country +
                 "&appid=35ec794bb2d83a735fb4edfd249390a7"
 
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
         return inflater.inflate(R.layout.fragment_current_temp, container, false)
     }
 
@@ -37,6 +38,25 @@ class CurrentTempFragment : Fragment() {
         super.onStart()
         val view = view
         if (view != null) {
+
+            var loggedInUser:MainActivity = context as MainActivity
+
+            myFirebaseHelper.getUserData(loggedInUser.toString(), object : FirebaseHelper.GetUserCallback {
+                override fun onCallback(userdata: User) {
+                    city = userdata.city
+                    country = userdata.country
+                    return
+                }
+            })
+
+            var url =
+                "https://api.openweathermap.org/data/2.5/weather?q="+
+                        city+ "," + country +
+                        "&appid=35ec794bb2d83a735fb4edfd249390a7"
+
+
+
+
             tvMyCity = view.findViewById(R.id.tv_myTemp)
             tvMyCity.text = city.uppercase()
 

@@ -15,6 +15,10 @@ import com.google.firebase.firestore.ktx.firestore
 
 class MainActivity : AppCompatActivity() {
 
+    private var userName = ""
+    private var userCity = ""
+    private var userCountry = ""
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -35,6 +39,18 @@ class MainActivity : AppCompatActivity() {
         btmNavView.setupWithNavController(navController)
 
 
+        val bundle: Bundle? = intent.extras
+        userName = bundle?.get("EXTRA_LOGGED_IN_USER") as String
+        val userCity = bundle?.get("EXTRA_USERCITY")
+        val userCountry = bundle?.get("EXTRA_USERCOUNTRY")
+
+        Log.i("christiantallner",userName)
+
+
+    }
+
+    fun getUsername() : String {
+        return userName
     }
 
 
