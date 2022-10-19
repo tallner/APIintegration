@@ -11,14 +11,18 @@ import com.android.volley.Request
 import com.android.volley.RequestQueue
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 import org.json.JSONArray
 import org.json.JSONObject
 import java.lang.Exception
+
 
 class ProfileFragment : Fragment() {
     private lateinit var city: TextView
     private lateinit var country: TextView
     private lateinit var user: TextView
+    private val myFirebaseHelper = FirebaseHelper()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -41,8 +45,10 @@ class ProfileFragment : Fragment() {
             country.text = "Sweden"
             user.text = "Christian"
 
-
+            myFirebaseHelper.firebaseCodes()
 
         }
     }
+
+
 }
