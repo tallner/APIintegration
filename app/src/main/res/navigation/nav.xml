@@ -19,9 +19,9 @@
     </fragment>
 
     <fragment
-        android:id="@+id/thirdFragment"
-        android:name="com.tallner.apiintegration.ThirdFragment"
+        android:id="@+id/profileFragment"
+        android:name="com.tallner.apiintegration.ProfileFragment"
         android:label="Profile"
-        tools:layout="@layout/fragment_third">
+        tools:layout="@layout/fragment_profile">
         </fragment>
 </navigation>

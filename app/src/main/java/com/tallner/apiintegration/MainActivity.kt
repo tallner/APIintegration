@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         val navController = navHostFragment.navController
 
         //setup the bar on top of the app to get the labels from the fragments
-        val appBarConfiguration = AppBarConfiguration(setOf(R.id.currentTempFragment,R.id.forecastFragment,R.id.thirdFragment))
+        val appBarConfiguration = AppBarConfiguration(setOf(R.id.currentTempFragment,R.id.forecastFragment,R.id.profileFragment))
         setupActionBarWithNavController(navController,appBarConfiguration)
 
         //setup the navigation bar to be used with the navigation controller
