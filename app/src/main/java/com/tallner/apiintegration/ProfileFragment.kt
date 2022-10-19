@@ -1,22 +1,11 @@
 package com.tallner.apiintegration
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
-import com.android.volley.Request
-import com.android.volley.RequestQueue
-import com.android.volley.toolbox.JsonObjectRequest
-import com.android.volley.toolbox.Volley
-import com.google.firebase.firestore.ktx.firestore
-import com.google.firebase.ktx.Firebase
-import org.json.JSONArray
-import org.json.JSONObject
-import java.lang.Exception
-
 
 class ProfileFragment : Fragment() {
     private lateinit var city: TextView
@@ -41,14 +30,14 @@ class ProfileFragment : Fragment() {
             country = view.findViewById(R.id.tv_myCountry)
             user = view.findViewById(R.id.tv_myusername)
 
-            city.text = "Flyinge"
-            country.text = "Sweden"
-            user.text = "Christian"
-
-            myFirebaseHelper.firebaseCodes()
-
+            myFirebaseHelper.getUserData("Christian", object : FirebaseHelper.GetUserCallback {
+                override fun onCallback(userdata: User) {
+                    city.text = userdata.city
+                    country.text = userdata.country
+                    user.text = userdata.name
+                    return
+                }
+            })
         }
     }
-
-
 }
