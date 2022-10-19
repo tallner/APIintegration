@@ -29,8 +29,9 @@ class ProfileFragment : Fragment() {
             city = view.findViewById(R.id.tv_myHometown)
             country = view.findViewById(R.id.tv_myCountry)
             user = view.findViewById(R.id.tv_myusername)
+            var loggedInUser:MainActivity = context as MainActivity
 
-            myFirebaseHelper.getUserData("Christian", object : FirebaseHelper.GetUserCallback {
+            myFirebaseHelper.getUserData(loggedInUser.getUsername(), object : FirebaseHelper.GetUserCallback {
                 override fun onCallback(userdata: User) {
                     city.text = userdata.city
                     country.text = userdata.country
