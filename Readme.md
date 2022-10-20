@@ -3,7 +3,7 @@
 - [x] Valfritt API och Firebase koncept  
 - [x] Minst 4 fragments/activities  
 - [x] Implementera ett API  
-- [ ] Redovisa muntligt eller 200 ord  
+- [x] Redovisa med 200 ords worddocument 
   
 
 ## Väl godkänt kriterier  
