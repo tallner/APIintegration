@@ -2,7 +2,6 @@ package com.tallner.apiintegration
 
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -32,14 +31,14 @@ class CurrentTempFragment : Fragment() {
         val view = view
         if (view != null) {
 
-            var loggedInUser:MainActivity = context as MainActivity
+            val loggedInUser:MainActivity = context as MainActivity
 
             myFirebaseHelper.getUserData(loggedInUser.getUsername(), object : FirebaseHelper.GetUserCallback {
-                override fun onCallback(userdata: User) {
-                    var city = userdata.city
-                    var country = userdata.country
+                override fun onCallback(storedUserdata: User) {
+                    val city = storedUserdata.city
+                    val country = storedUserdata.country
 
-                    OpenWeatherAPIcall(city,country)
+                    OpenWeatherAPIcallCurrentTemp(city,country)
 
                     return
                 }
@@ -49,9 +48,9 @@ class CurrentTempFragment : Fragment() {
         }
     }
 
-    private fun OpenWeatherAPIcall(city:String,country:String){
+    private fun OpenWeatherAPIcallCurrentTemp(city:String,country:String){
 
-        var url =
+        val url =
             "https://api.openweathermap.org/data/2.5/weather?q="+
                     city+ "," + country +
                     "&appid=35ec794bb2d83a735fb4edfd249390a7"

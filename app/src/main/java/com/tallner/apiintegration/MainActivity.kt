@@ -2,22 +2,15 @@ package com.tallner.apiintegration
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import androidx.navigation.NavController
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.google.firebase.ktx.Firebase
-import com.google.firebase.firestore.ktx.firestore
 
 class MainActivity : AppCompatActivity() {
 
     private var userName = ""
-    private var userCity = ""
-    private var userCountry = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,13 +31,9 @@ class MainActivity : AppCompatActivity() {
         //setup the navigation bar to be used with the navigation controller
         btmNavView.setupWithNavController(navController)
 
-
+        // store the username for the application to use
         val bundle: Bundle? = intent.extras
         userName = bundle?.get("EXTRA_LOGGED_IN_USER") as String
-        val userCity = bundle?.get("EXTRA_USERCITY")
-        val userCountry = bundle?.get("EXTRA_USERCOUNTRY")
-
-        Log.i("christiantallner",userName)
 
 
     }
